@@ -1,0 +1,80 @@
+@import "variables";
+
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, pre,
+a, abbr, acronym, address, big, cite, code, dl, dt, dd, form, label, legend, ul {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+button {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: $font;
+  font-size: $font-size;
+  line-height: 1.2;
+  color: $clr-font;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table, td, tr {
+  vertical-align: top;
+}
+
+img {
+  border: 0 none;
+  display: block;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin: 0;
+}
