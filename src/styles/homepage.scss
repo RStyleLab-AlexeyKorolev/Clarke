@@ -1,0 +1,79 @@
+.header-block {
+  height: 722px;
+  background-color: #cad8e3;
+}
+
+.intro-block {
+  width: 876px;
+  padding: 90px 60px 70px;
+  background-color: $clr-white;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  margin: -160px 0 115px 0;
+  p {
+    position: relative;
+  }
+  h5 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f0f1f6;
+    position: absolute;
+    top: 65px;
+    user-select: none;
+  }
+}
+
+.accomodation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  & > div {
+    width: 330px;
+    min-height: 544px;
+    padding: 120px 40px 40px;
+    background-color: #f8f6f7;
+  }
+  .heading {
+    display: block;
+    font-size: 30px;
+    min-height: 120px;
+    margin-bottom: 30px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      background-color: $clr-blue;
+    }
+  }
+}
+
+.accomodation-banner {
+  background-color: #556479;
+  margin: -72px 0 220px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $clr-white;
+  text-transform: uppercase;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 358px;
+    position: relative;
+  }
+  p {
+    margin-top: 60px;
+  }
+  .btn {
+    min-width: 226px;
+    position: absolute;
+    bottom: -30px;
+  }
+}
