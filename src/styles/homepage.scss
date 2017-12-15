@@ -1,65 +1,107 @@
 .header-block {
+  display: flex;
+  align-items: center;
   height: 722px;
   background-color: #cad8e3;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 187px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+  }
+  .txt-block {
+    padding-top: 12px;
+    color: $clr-white;
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      span {
+        font-weight: 600;
+      }
+    }
+    p {
+      width: 640px;
+      font-size: 20px;
+      line-height: 1.5;
+      padding-top: 17px;
+    }
+  }
 }
 
 .intro-block {
-  width: 876px;
-  padding: 90px 60px 70px;
+  width: 875px;
+  padding: 58px 81px 51px 69px;
   background-color: $clr-white;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2;
+  color: $clr-denim;
+  box-shadow: 0 2px 49px 0 rgba(0, 0, 0, 0.1);
+  margin: -145px 0 118px 0;
   position: relative;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  margin: -160px 0 115px 0;
-  p {
-    position: relative;
-  }
-  h5 {
-    font-size: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #f0f1f6;
-    position: absolute;
-    top: 65px;
-    user-select: none;
-  }
 }
 
 .accomodation {
   display: flex;
   justify-content: space-between;
-  position: relative;
   & > div {
     width: 330px;
     min-height: 544px;
-    padding: 120px 40px 40px;
+    padding: 121px 38px 40px;
     background-color: #f8f6f7;
+    position: relative;
+  }
+  ins {
+    display: block;
+    text-decoration: none;
+    position: absolute;
+    left: -15px;
+    top: 6px;
+    font-size: 150px;
+    font-weight: 800;
+    color: $clr-white;
+    letter-spacing: 5px;
   }
   .heading {
     display: block;
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    color: $clr-denim;
     min-height: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     position: relative;
     &:before {
       content: "";
       display: block;
       width: 1px;
-      height: 80px;
+      height: 84px;
       position: absolute;
-      top: 0;
-      left: -40px;
-      background-color: $clr-blue;
+      top: 10px;
+      left: -38px;
+      background-color: #cdbfab;
     }
+    span {
+      display: block;
+      font-weight: normal;
+    }
+  }
+  p {
+    line-height: 1.6;
+    letter-spacing: -0.3px;
   }
 }
 
 .accomodation-banner {
   background-color: #556479;
-  margin: -72px 0 220px;
-  font-size: 18px;
-  font-weight: bold;
-  color: $clr-white;
-  text-transform: uppercase;
+  margin: -72px 0 213px;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -69,7 +111,13 @@
     position: relative;
   }
   p {
-    margin-top: 60px;
+    margin-top: 46px;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 2.42;
+    letter-spacing: 2.1px;
+    color: #f8f9ff;
+    text-transform: uppercase;
   }
   .btn {
     min-width: 226px;

@@ -5,26 +5,28 @@
 }
 
 .wrapper {
-  width: 1096px;
+  width: 1094px;
   margin: 0 auto;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
+  line-height: 2.08;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
-  color: #2d313c;
-  margin-bottom: 65px;
+  color: $clr-black;
+  margin-bottom: 52px;
   position: relative;
   &:before {
     content: "";
     display: block;
     position: absolute;
     left: -172px;
-    bottom: 5px;
+    bottom: 16px;
     width: 79px;
     height: 4px;
-    background-color: $clr-blue;
+    background-color: $clr-beige-two;
   }
 }
 
@@ -33,15 +35,16 @@ h2 {
   min-width: 200px;
   height: 60px;
   padding: 0 20px;
-  background-color: #405d95;
-  color: $clr-white;
-  font-size: 16px;
+  background-image: linear-gradient(107deg, #d62c3b, #9f041b);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  font-size: 15px;
   line-height: 60px;
-  font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: $clr-white-two;
   text-align: center;
   text-transform: uppercase;
   border: none;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
   cursor: pointer;
   border-radius: 0;
   outline: none;
