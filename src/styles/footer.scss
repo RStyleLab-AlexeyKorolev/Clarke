@@ -1,8 +1,56 @@
 footer {
   background-color: #494d50;
   margin: 0 -30px;
+  font-size: 13px;
+  color: $clr-white;
   .wrapper {
     display: flex;
-    height: 299px;
-}
+    align-items: center;
+    min-height: 299px;
+    padding: 35px 0;
+  }
+  ul {
+    width: 260px;
+    margin-right: 72px;
+    li {
+      margin-bottom: 17px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        font-weight: 600;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        color: $clr-white;
+      }
+    }
+  }
+  .col {
+    width: 440px;
+    .contact-info {
+      font-weight: 800;
+      line-height: 2;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      a {
+        color: $clr-white
+      }
+    }
+    .address-info {
+      p {
+        font-weight: 600;
+        line-height: 1.38;
+        padding-bottom: 16px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+        span {
+          display: block;
+          padding-bottom: 1px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
 }

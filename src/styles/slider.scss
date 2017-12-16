@@ -1,0 +1,98 @@
+.hp-slider {
+  padding-top: 83px;
+  margin-bottom: 65px;
+  position: relative;
+  .slider-controls {
+    height: 83px;
+    padding-left: 53px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .count {
+    position: absolute;
+    left: -85px;
+    color: $clr-charcoal-grey;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    bottom: auto;
+    width: auto;
+  }
+  .grey-bg {
+    width: 100%;
+    height: 777px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $clr-white-two;
+  }
+  .swiper-container {
+    position: relative;
+    overflow: visible;
+  }
+  .photo-block {
+    height: 597px;
+    background-color: #93a1b3;
+    color: $clr-charcoal-grey;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 0.92;
+    & > .wrapper {
+      float: right;
+      margin: 0;
+      padding-top: 86px;
+      & > div {
+        width: 400px;
+      }
+    }
+    .heading {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 2.56;
+      letter-spacing: 2px;
+      color: $clr-white;
+      text-transform: uppercase;
+    }
+  }
+  .inner-photo {
+    position: absolute;
+    right: -30px;
+    top: 130px;
+    width: 610px;
+    height: 343px;
+    background-color: $clr-white;
+  }
+  .swiper-slide:first-child .inner-photo {
+    box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  .address-block {
+    height: 97px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.6;
+    color: $clr-denim;
+    padding: 0 43px;
+    background-color: $clr-white-two;
+  }
+  .descr-block {
+    min-height: 210px;
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $clr-white;
+    .txt-block {
+      width: 440px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .btns {
+      margin: 32px 105px 0 0 ;
+      .btn {
+        display: block;
+      }
+    }
+  }
+}
