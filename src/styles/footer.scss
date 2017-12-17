@@ -3,15 +3,28 @@ footer {
   margin: 0 -30px;
   font-size: 13px;
   color: $clr-white;
+  @media (max-width: $screen-desktop) {
+    margin: 0;
+    font-size: 15px;
+  }
   .wrapper {
     display: flex;
     align-items: center;
     min-height: 299px;
     padding: 35px 0;
+    @media (max-width: $screen-desktop) {
+      flex-direction: column;
+      justify-content: center;
+      min-height: 417px;
+      padding: 30px 40px;
+    }
   }
   ul {
     width: 260px;
     margin-right: 72px;
+    @media (max-width: $screen-desktop) {
+      display: none;
+    }
     li {
       margin-bottom: 17px;
       &:last-child {
@@ -27,12 +40,18 @@ footer {
   }
   .col {
     width: 440px;
+    @media (max-width: $screen-desktop) {
+      width: auto;
+    }
     .contact-info {
       font-weight: 800;
       line-height: 2;
       letter-spacing: 1.3px;
       text-transform: uppercase;
       margin-bottom: 28px;
+      @media (max-width: $screen-desktop) {
+        display: none;
+      }
       a {
         color: $clr-white
       }
@@ -42,6 +61,9 @@ footer {
         font-weight: 600;
         line-height: 1.38;
         padding-bottom: 16px;
+        @media (max-width: $screen-desktop) {
+          line-height: 1.6;
+        }
         &:last-child {
           padding-bottom: 0;
         }

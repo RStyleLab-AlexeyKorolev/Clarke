@@ -4,6 +4,10 @@
   height: 722px;
   background-color: #cad8e3;
   position: relative;
+  @media (max-width: $screen-desktop) {
+    height: 100vh;
+    margin-bottom: 40px;
+  }
   &:before {
     content: '';
     display: block;
@@ -14,13 +18,24 @@
     top: 0;
     opacity: 0.3;
     background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+    @media (max-width: $screen-desktop) {
+      display: none;
+    }
   }
   .txt-block {
     padding-top: 12px;
     color: $clr-white;
+    @media (max-width: $screen-desktop) {
+      padding-top: 60px;
+    }
     h1 {
       font-size: 50px;
       font-weight: 900;
+      @media (max-width: $screen-desktop) {
+        font-size: 40px;
+        line-height: 1;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
       span {
         font-weight: 600;
       }
@@ -30,6 +45,10 @@
       font-size: 20px;
       line-height: 1.5;
       padding-top: 17px;
+      @media (max-width: $screen-desktop) {
+        width: auto;
+        padding-top: 29px;
+      }
     }
   }
 }
@@ -45,17 +64,39 @@
   box-shadow: 0 2px 49px 0 rgba(0, 0, 0, 0.1);
   margin: -145px 0 118px 0;
   position: relative;
+  @media (max-width: $screen-desktop) {
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    font-size: 17px;
+    line-height: 1.8;
+    box-shadow: none;
+    margin: 0 0 74px;
+    position: static;
+  }
 }
 
 .accomodation {
   display: flex;
   justify-content: space-between;
+  @media (max-width: $screen-desktop) {
+    display: block;
+  }
   & > div {
     width: 330px;
     min-height: 544px;
     padding: 121px 38px 40px;
     background-color: #f8f6f7;
     position: relative;
+    @media (max-width: $screen-desktop) {
+      width: auto;
+      min-height: 0;
+      padding: 48px 20px 30px 20px;
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   ins {
     display: block;
@@ -67,6 +108,12 @@
     font-weight: 800;
     color: $clr-white;
     letter-spacing: 5px;
+    @media (max-width: $screen-desktop) {
+      font-size: 100px;
+      letter-spacing: 3.3px;
+      left: -21px;
+      top: -26px;
+    }
   }
   .heading {
     display: block;
@@ -78,6 +125,10 @@
     min-height: 120px;
     margin-bottom: 31px;
     position: relative;
+    @media (max-width: $screen-desktop) {
+      min-height: 0;
+      margin-bottom: 34px;
+    }
     &:before {
       content: "";
       display: block;
@@ -87,6 +138,11 @@
       top: 10px;
       left: -38px;
       background-color: #cdbfab;
+      @media (max-width: $screen-desktop) {
+        height: 76px;
+        left: -20px;
+        top: 23px;
+      }
     }
     strong {
       display: block;
@@ -103,6 +159,9 @@
 .accomodation-banner {
   background-color: #556479;
   margin: -72px 0 213px;
+  @media (max-width: $screen-desktop) {
+    margin: -36px 0 106px;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -110,6 +169,9 @@
     align-items: center;
     height: 358px;
     position: relative;
+    @media (max-width: $screen-desktop) {
+      height: 274px;
+    }
   }
   p {
     margin-top: 46px;
@@ -119,6 +181,13 @@
     letter-spacing: 2.1px;
     color: #f8f9ff;
     text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $screen-desktop) {
+      margin-top: 22px;
+      font-size: 15px;
+      line-height: 1.6;
+      letter-spacing: 1.7px;
+    }
   }
   .btn {
     min-width: 226px;
@@ -131,11 +200,23 @@
   background-color: $clr-white-two;
   padding: 85px 0 403px;
   margin-bottom: 139px;
+  @media (max-width: $screen-desktop) {
+    padding: 55px 0 49px;
+    margin-bottom: 45px;
+  }
   .accomodation {
     & > div {
       min-height: 518px;
       padding-bottom: 70px;
       background-color: $clr-white;
+      box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.05);
+      @media (max-width: $screen-desktop) {
+        min-height: 0;
+        padding-bottom: 30px;
+        .heading {
+          margin-bottom: 20px;
+        }
+      }
     }
     ins {
       color: $clr-white-two;
@@ -143,16 +224,31 @@
     .view-more {
       position: absolute;
       bottom: 25px;
+      @media (max-width: $screen-desktop) {
+        position: relative;
+        bottom: 0;
+        margin-top: 25px;
+      }
     }
   }
 }
 
 .history-section {
-  background-color: $clr-white-two;
-  min-height: 398px;
-  padding: 77px 0 85px 59px;
   margin-bottom: 72px;
-  position: relative;
+  @media (max-width: $screen-desktop) {
+    margin-bottom: 0;
+  }
+  .wrapper {
+    background-color: $clr-white-two;
+    min-height: 398px;
+    padding: 77px 0 85px 59px;
+    position: relative;
+    @media (max-width: $screen-desktop) {
+      min-height: 0;
+      padding: 0 20px;
+      background-color: transparent;
+    }
+  }
   &:before {
     content: '';
     display: block;
@@ -161,6 +257,9 @@
     background-color: #e0d8ce;
     position: absolute;
     left: 0;
+    @media (max-width: $screen-desktop) {
+      display: none;
+    }
   }
   h4 {
     position: absolute;
@@ -170,13 +269,31 @@
     font-weight: 300;
     color: $clr-denim;
     margin: 0;
+    @media (max-width: $screen-desktop) {
+      font-size: 30px;
+      top: -18px;
+      left: 16px;
+      z-index: 3;
+    }
   }
   .view-more {
     position: absolute;
     bottom: 35px;
+    @media (max-width: $screen-desktop) {
+      position: relative;
+      bottom: 0;
+      margin-top: 21px;
+    }
   }
   .txt-block {
     width: 504px;
+    @media (max-width: $screen-desktop) {
+      width: auto;
+      padding: 49px 20px 31px;
+      background-color: $clr-white-two;
+      position: relative;
+      z-index: 2;
+    }
     p {
       font-weight: 500;
       line-height: 1.6;
@@ -190,12 +307,49 @@
     right: -110px;
     bottom: -50px;
     background-color: $clr-white;
+    @media (max-width: $screen-desktop) {
+      position: relative;
+      width: 100vw;
+      height: 270px;
+      box-shadow: none;
+      right: auto;
+      bottom: auto;
+      margin: -50px 0 0 -20px;
+      background-color: #d9ddde;
+    }
   }
 }
 
 .contact-section {
   margin-bottom: 145px;
+  @media (max-width: $screen-desktop) {
+    text-align: center;
+    margin: -30px 0 49px;
+    position: relative;
+  }
   .contact-info {
     display: none;
+    @media (max-width: $screen-desktop) {
+      display: block;
+      padding-top: 34px;
+    }
+    p {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $clr-pinkish-grey;
+      padding-top: 10px;
+      &.phone {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 0.87;
+        letter-spacing: 3px;
+      }
+      a {
+        color: $clr-pinkish-grey;
+      }
+    }
   }
 }
