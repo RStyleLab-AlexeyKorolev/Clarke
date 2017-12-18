@@ -5,11 +5,32 @@ header {
   width: 100%;
   .wrapper {
     display: flex;
+    @media (max-width: $screen-desktop) {
+      padding-top: 20px;
+    }
+  }
+  .logo {
+    width: 219px;
+    height: 62px;
+    margin-top: 50px;
+    background: #231f20;
+    @media (max-width: $screen-desktop) {
+      width: 175px;
+      height: 50px;
+      margin-top: 0;
+    }
   }
   nav {
     margin-left: auto;
     ul {
       display: flex;
+      @media (max-width: $screen-desktop) {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
       li {
         padding-top: 62px;
         margin-left: 39px;
@@ -29,6 +50,117 @@ header {
             cursor: default;
             font-weight: bold;
             color: $clr-denim;
+          }
+        }
+      }
+    }
+  }
+  .menu-caller {
+    display: none;
+    @media (max-width: $screen-desktop) {
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      cursor: pointer;
+      margin-top: -4px;
+      z-index: 10;
+      i {
+        position: absolute;
+        right: 12px;
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: $clr-white;
+        &:first-child {
+          top: 17px;
+        }
+        &:nth-child(2) {
+          top: 24px;
+          opacity: 1;
+          transition: opacity 0.2s 0.4s;
+        }
+        &:nth-child(3) {
+          top: 31px;
+        }
+        &:first-child,
+        &:nth-child(3) {
+          transition: transform 0.2s, top 0.2s 0.2s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-desktop) {
+  .mobile-menu {
+    height: 100%;
+    overflow: hidden;
+    header {
+      .menu-caller i {
+        &:first-child {
+          transform: rotate(45deg);
+          top: 24px;
+        }
+        &:nth-child(2) {
+          transition: opacity 0.2s;
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 24px;
+        }
+        &:first-child,
+        &:nth-child(3) {
+          transition: transform 0.2s 0.2s, top 0.2s 0.2s;
+        }
+      }
+      .logo {
+        position: relative;
+        z-index: 10;
+      }
+      nav ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(58, 79, 125, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        visibility: visible;
+        opacity: 1;
+        li {
+          margin: 0;
+          padding: 0;
+          border-top: none;
+          &.active a {
+            color: $clr-white;
+            cursor: pointer;
+          }
+          a {
+            display: block;
+            font-size: 15px;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1.5;
+            padding: 14px 20px;
+          }
+          &.contact-lnk {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            a {
+              padding: 0;
+              text-align: center;
+              margin: 0 20px 22px;
+              height: 56px;
+              line-height: 54px;
+              border-radius: 4px;
+              border: 2px $clr-white solid;
+            }
           }
         }
       }

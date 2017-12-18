@@ -9,6 +9,7 @@
     // *** BODY of js code *** //
     customJS = function () {
 
+        // homepage slider wrapper size
         function sliderWidth() {
             var windowWidth = $(window).width(),
                 offset = $('.wrapper').offset().left,
@@ -23,6 +24,7 @@
             sliderWidth();
         });
 
+        // homepage slider init
         var mySwiper = new Swiper('.swiper-container', {
             effect: 'fade',
             autoHeight: true,
@@ -39,8 +41,9 @@
             }
         });
 
-        body.on('click', '.test', function () {
-            console.log('start');
+        // mobile menu
+        body.on('click', '.menu-caller', function () {
+            body.toggleClass('mobile-menu');
         });
 
     }; // end customJS
