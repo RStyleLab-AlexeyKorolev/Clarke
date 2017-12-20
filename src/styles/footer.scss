@@ -3,7 +3,7 @@ footer {
   margin: 0 -30px;
   font-size: 13px;
   color: $clr-white;
-  @media (max-width: $screen-desktop) {
+  @media (max-width: $screen-tablet) {
     margin: 0;
     font-size: 15px;
   }
@@ -12,7 +12,7 @@ footer {
     align-items: center;
     min-height: 299px;
     padding: 35px 0;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       flex-direction: column;
       justify-content: center;
       min-height: 417px;
@@ -22,7 +22,7 @@ footer {
   ul {
     width: 260px;
     margin-right: 72px;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       display: none;
     }
     li {
@@ -40,7 +40,7 @@ footer {
   }
   .col {
     width: 440px;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       width: auto;
     }
     .contact-info {
@@ -49,7 +49,7 @@ footer {
       letter-spacing: 1.3px;
       text-transform: uppercase;
       margin-bottom: 28px;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         display: none;
       }
       a {
@@ -61,7 +61,7 @@ footer {
         font-weight: 600;
         line-height: 1.38;
         padding-bottom: 16px;
-        @media (max-width: $screen-desktop) {
+        @media (max-width: $screen-tablet) {
           line-height: 1.6;
         }
         &:last-child {

@@ -5,7 +5,7 @@ header {
   width: 100%;
   .wrapper {
     display: flex;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       padding-top: 20px;
     }
   }
@@ -14,7 +14,7 @@ header {
     height: 62px;
     margin-top: 50px;
     background: #231f20;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       width: 175px;
       height: 50px;
       margin-top: 0;
@@ -24,7 +24,7 @@ header {
     margin-left: auto;
     ul {
       display: flex;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         visibility: hidden;
         width: 0;
         height: 0;
@@ -57,7 +57,7 @@ header {
   }
   .menu-caller {
     display: none;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       display: block;
       width: 50px;
       height: 50px;
@@ -92,7 +92,7 @@ header {
   }
 }
 
-@media (max-width: $screen-desktop) {
+@media (max-width: $screen-tablet) {
   .mobile-menu {
     height: 100%;
     overflow: hidden;

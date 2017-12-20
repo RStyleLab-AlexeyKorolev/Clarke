@@ -31,6 +31,10 @@
             fadeEffect: {
                 crossFade: true
             },
+            zoom: {
+                containerClass: 'inner-photo',
+                maxRatio: 2.5
+            },
             pagination: {
                 el: '.hp-slider .count',
                 type: 'fraction'

@@ -26,6 +26,9 @@
   width: 1096px;
   margin: 0 auto;
   @media (max-width: $screen-desktop) {
+    width: 964px;
+  }
+  @media (max-width: $screen-tablet) {
     width: auto;
     margin: 0;
     padding: 0 20px;
@@ -40,7 +43,7 @@ h2 {
   text-transform: uppercase;
   color: $clr-black;
   margin-bottom: 52px !important;
-  @media (max-width: $screen-desktop) {
+  @media (max-width: $screen-tablet) {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.7px;
@@ -67,6 +70,9 @@ h2 {
       width: 35px;
     }
     @media (max-width: $screen-desktop) {
+      width: 20px;
+    }
+    @media (max-width: $screen-tablet) {
       width: 20px;
       margin: 0;
       top: 12px;

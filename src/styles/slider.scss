@@ -2,7 +2,7 @@
   padding-top: 83px;
   margin-bottom: 80px;
   position: relative;
-  @media (max-width: $screen-desktop) {
+  @media (max-width: $screen-tablet) {
     padding-top: 54px;
     margin-bottom: 94px;
   }
@@ -13,6 +13,9 @@
     align-items: center;
     position: relative;
     @media (max-width: $screen-desktop) {
+      padding-left: 80px;
+    }
+    @media (max-width: $screen-tablet) {
       height: 54px;
       padding-left: 25px;
     }
@@ -30,6 +33,9 @@
       left: -43px;
     }
     @media (max-width: $screen-desktop) {
+      left: 20px;
+    }
+    @media (max-width: $screen-tablet) {
       left: -48px;
     }
   }
@@ -40,7 +46,7 @@
     right: 0;
     top: 0;
     background-color: $clr-white-two;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       height: 532px;
       width: calc(100% - 42px) !important;
       right: -20px;
@@ -57,7 +63,7 @@
     font-size: 50px;
     font-weight: 300;
     line-height: 0.92;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       height: 251px;
       font-size: 24px;
       line-height: 1;
@@ -70,7 +76,7 @@
       float: right;
       margin: 0;
       padding-top: 86px;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         float: none;
         height: 100%;
         padding-top: 27px;
@@ -78,6 +84,9 @@
       & > div {
         width: 500px;
         @media (max-width: $screen-desktop) {
+          width: 400px;
+        }
+        @media (max-width: $screen-tablet) {
           width: auto;
         }
       }
@@ -90,7 +99,7 @@
       letter-spacing: 2px;
       color: $clr-white;
       text-transform: uppercase;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         font-size: 12px;
         line-height: 1.5;
         letter-spacing: 1.3px;
@@ -105,13 +114,28 @@
     height: 343px;
     background-color: $clr-white;
     box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-out;
     @media (max-width: $screen-desktop) {
+      width: 510px;
+      height: 243px;
+      right: 0;
+      top: 177px;
+    }
+    @media (max-width: $screen-tablet) {
       right: -20px;
       top: calc(100% - 39px);
       width: 237px;
       height: 133px;
       box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.25);
     }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-slide-zoomed .inner-photo {
+    right: 50%;
+    transform: translateX(50%) !important;
   }
   .address-block {
     height: 97px;
@@ -121,19 +145,17 @@
     line-height: 1.6;
     color: $clr-denim;
     padding: 0 43px;
-    background-color: $clr-white-two;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       height: auto;
       display: block;
       padding: 0;
-      background-color: transparent;
     }
   }
   .descr-block {
     padding-top: 28px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: $screen-desktop) {
+    @media (max-width: $screen-tablet) {
       padding-top: 22px;
       display: block;
       background: transparent;
@@ -142,13 +164,13 @@
       width: 440px;
       font-weight: 500;
       line-height: 1.6;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         width: auto;
       }
     }
     .btns {
       margin: 32px 105px 0 0;
-      @media (max-width: $screen-desktop) {
+      @media (max-width: $screen-tablet) {
         margin: 42px auto 0;
         width: 200px;
       }
