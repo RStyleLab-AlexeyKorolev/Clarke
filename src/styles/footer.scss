@@ -1,8 +1,8 @@
 footer {
-  background-color: #494d50;
   margin: 0 -30px;
   font-size: 13px;
   color: $clr-white;
+  background: url("../images/pic_footer.png") no-repeat 50% 100% / cover;
   @media (max-width: $screen-tablet) {
     margin: 0;
     font-size: 15px;
