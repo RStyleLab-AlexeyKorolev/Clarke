@@ -16,7 +16,7 @@ footer {
       flex-direction: column;
       justify-content: center;
       min-height: 417px;
-      padding: 30px 40px;
+      padding: 35px 40px;
     }
   }
   ul {
@@ -42,6 +42,11 @@ footer {
     width: 440px;
     @media (max-width: $screen-tablet) {
       width: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: 33px;
     }
     .contact-info {
       font-weight: 800;
@@ -73,6 +78,12 @@ footer {
           font-weight: 300;
         }
       }
+    }
+  }
+  .footer-logo {
+    margin-left: auto;
+    @media (max-width: $screen-tablet) {
+      margin: auto 0 0 0;
     }
   }
 }

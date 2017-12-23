@@ -8,16 +8,56 @@
   }
   .slider-controls {
     height: 83px;
-    padding-left: 53px;
+    padding-left: 43px;
     display: flex;
     align-items: center;
     position: relative;
+    font-size: 30px;
     @media (max-width: $screen-desktop) {
-      padding-left: 80px;
+      padding-left: 90px;
     }
     @media (max-width: $screen-tablet) {
       height: 54px;
-      padding-left: 25px;
+      padding-left: 15px;
+    }
+    .slider-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      i {
+        display: block;
+        font-style: normal;
+        position: relative;
+        background-color: #e2dbd1;
+        width: 30px;
+        height: 2px;
+        &:before, &:after {
+          display: block;
+          content: "";
+          position: absolute;
+          left: 0;
+          background-color: #d0c4b1;
+          width: 14px;
+          height: 1px;
+          transform-origin: 0 0;
+        }
+        &:before {
+          transform: rotate(-40deg);
+        }
+        &:after {
+          transform: rotate(40deg);
+        }
+      }
+      &.hp-slider-next {
+        transform: rotate(180deg);
+        margin-left: 32px;
+        @media (max-width: $screen-tablet) {
+          margin-left: 2px;
+        }
+      }
     }
   }
   .count {
@@ -58,11 +98,13 @@
   }
   .photo-block {
     height: 597px;
-    background-color: #93a1b3;
     color: $clr-charcoal-grey;
     font-size: 50px;
     font-weight: 300;
     line-height: 0.92;
+    background-size: cover;
+    background-position: 50% 0;
+    background-color: #93a1b3;
     @media (max-width: $screen-tablet) {
       height: 251px;
       font-size: 24px;
@@ -71,6 +113,7 @@
       width: calc(100% - 20px) !important;
       position: relative;
       margin-bottom: 127px;
+      background-position: 50% 50%;
     }
     & > .wrapper {
       float: right;
@@ -112,30 +155,83 @@
     top: 130px;
     width: 610px;
     height: 343px;
-    background-color: $clr-white;
-    box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease-out;
     @media (max-width: $screen-desktop) {
       width: 510px;
-      height: 243px;
+      height: 310px;
       right: 0;
-      top: 177px;
+      top: 144px;
     }
     @media (max-width: $screen-tablet) {
       right: -20px;
       top: calc(100% - 39px);
       width: 237px;
       height: 133px;
-      box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.25);
     }
     img {
       width: 100%;
       height: 100%;
+      box-shadow: 0 2px 50px 0 rgba(0, 0, 0, 0.25);
+      @media (max-width: $screen-tablet) {
+        box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+    .loupe {
+      display: block;
+      width: 54px;
+      height: 54px;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -27px 0 0 -27px;
+      border-radius: 100%;
+      text-align: center;
+      cursor: pointer;
+      i {
+        position: relative;
+        top: 19px;
+        left: -1px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 100%;
+        height: 15px;
+        width: 15px;
+        border: 2px solid $clr-white;
+        &:after {
+          content: "";
+          height: 2px;
+          width: 8px;
+          background: $clr-white;
+          position: absolute;
+          top: 12px;
+          left: 9px;
+          transform: rotate(45deg);
+        }
+      }
     }
   }
-  .swiper-slide-zoomed .inner-photo {
-    right: 50%;
-    transform: translateX(50%) !important;
+  .swiper-slide-zoomed {
+    cursor: zoom-out;
+    .inner-photo {
+      right: 50%;
+      transform: translateX(50%) !important;
+      @media (max-width: $screen-tablet) {
+        top: 165px;
+      }
+      img {
+        box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.5);
+      }
+      .loupe i:before {
+        content: "";
+        height: 1px;
+        width: 5px;
+        background: $clr-white;
+        position: absolute;
+        left: 3px;
+        top: 5px;
+      }
+    }
   }
   .address-block {
     height: 97px;
@@ -178,5 +274,8 @@
         display: block;
       }
     }
+  }
+  &.pic-zoom {
+    cursor: zoom-out;
   }
 }

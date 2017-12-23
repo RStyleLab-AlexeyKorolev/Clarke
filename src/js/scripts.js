@@ -31,9 +31,12 @@
             fadeEffect: {
                 crossFade: true
             },
+            loop: true,
+            simulateTouch: false,
             zoom: {
                 containerClass: 'inner-photo',
-                maxRatio: 2.5
+                maxRatio: 2,
+                toggle: false
             },
             pagination: {
                 el: '.hp-slider .count',
@@ -42,6 +45,22 @@
             navigation: {
                 nextEl: '.hp-slider-next',
                 prevEl: '.hp-slider-prev'
+            }
+        });
+
+        // homepage image zoom
+        body.on('click', '.hp-slider .loupe', function (e) {
+            if (!$(this).closest('.hp-slider').hasClass('pic-zoom')) {
+                mySwiper.zoom.in();
+                $('.hp-slider').addClass('pic-zoom');
+                e.stopPropagation();
+            }
+        });
+
+        body.on('click', '.hp-slider', function () {
+            if ($(this).hasClass('pic-zoom')) {
+                mySwiper.zoom.out();
+                $('.hp-slider').removeClass('pic-zoom');
             }
         });
 
