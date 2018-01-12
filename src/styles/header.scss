@@ -16,6 +16,7 @@ header {
     width: 219px;
     height: 62px;
     margin-top: 50px;
+    transition: all 0.5s ease-out 1s;
     img {
       width: 100%;
       height: 100%;
@@ -27,6 +28,7 @@ header {
       width: 175px;
       height: 50px;
       margin-top: 0;
+      transition: none;
     }
   }
   nav {
@@ -52,6 +54,22 @@ header {
           color: $clr-white;
           display: inline-block;
           padding: 8px 0;
+          transition: all 0.5s ease-out 1.3s;
+        }
+        &:nth-child(2) a {
+          transition-delay: 1.4s;
+        }
+        &:nth-child(3) a {
+          transition-delay: 1.5s;
+        }
+        &:nth-child(4) a {
+          transition-delay: 1.6s;
+        }
+        &:nth-child(5) a {
+          transition-delay: 1.7s;
+        }
+        &:nth-child(6) a {
+          transition-delay: 1.8s;
         }
         &.active {
           border-color: $clr-white;
@@ -164,6 +182,7 @@ header {
             letter-spacing: normal;
             line-height: 1.5;
             padding: 14px 20px;
+            transition: none;
             @media (orientation: landscape) {
               font-size: 13px;
               padding: 8px 20px;

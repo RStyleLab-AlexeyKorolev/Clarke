@@ -9,6 +9,10 @@
     // *** BODY of js code *** //
     customJS = function () {
 
+        $(window).on('load', function() {
+            $('body').removeClass('preload');
+        });
+
         // homepage slider wrapper size
         function sliderWidth() {
             var windowWidth = $(window).width(),
@@ -46,6 +50,16 @@
                 nextEl: '.hp-slider-next',
                 prevEl: '.hp-slider-prev'
             }
+        });
+
+        mySwiper.on('slideChangeTransitionStart', function () {
+            $('.hp-slider .swiper-container').addClass('animation');
+            console.log('start');
+        });
+
+        mySwiper.on('slideChangeTransitionEnd', function () {
+            $('.hp-slider .swiper-container').removeClass('animation');
+            console.log('end');
         });
 
         // homepage image zoom

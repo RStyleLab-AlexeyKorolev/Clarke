@@ -55,6 +55,11 @@ body {
   color: $clr-font;
   overflow-x: hidden;
   background: url("../images/bg_page.gif") repeat-y 50% 0;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  &.preload * {
+    transition: none !important;
+  }
 }
 
 table {

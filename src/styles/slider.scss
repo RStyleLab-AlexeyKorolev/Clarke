@@ -95,6 +95,17 @@
   .swiper-container {
     position: relative;
     overflow: visible;
+    @media (min-width: 2000px) {
+      width: 1236px;
+    }
+    &.animation {
+      .photo-block {
+        transform: translateX(-70px);
+      }
+      .inner-photo {
+        transform: translateX(70px);
+      }
+    }
   }
   .photo-block {
     height: 597px;
@@ -103,8 +114,13 @@
     font-weight: 300;
     line-height: 0.92;
     background-size: cover;
-    background-position: 50% 0;
+    background-position: 50% 50%;
     background-color: #93a1b3;
+    transition: all 0.3s ease-out;
+    @media (min-width: 2000px) {
+      width: 1236px !important;
+      transform: translateX(-70px);
+    }
     @media (max-width: $screen-tablet) {
       height: 251px;
       font-size: 24px;
@@ -113,7 +129,6 @@
       width: calc(100% - 20px) !important;
       position: relative;
       margin-bottom: 127px;
-      background-position: 50% 50%;
     }
     & > .wrapper {
       float: right;
@@ -156,6 +171,9 @@
     width: 610px;
     height: 343px;
     transition: all 0.3s ease-out;
+    @media (min-width: 2000px) {
+      right: -170px;
+    }
     @media (max-width: $screen-desktop) {
       width: 510px;
       height: 310px;
@@ -163,8 +181,8 @@
       top: 144px;
     }
     @media (max-width: $screen-tablet) {
-      right: -20px;
-      top: calc(100% - 39px);
+      top: 212px;
+      right: 0;
       width: 237px;
       height: 133px;
     }
