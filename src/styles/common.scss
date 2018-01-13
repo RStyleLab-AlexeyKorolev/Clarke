@@ -1,5 +1,4 @@
 .main-wrapper {
-  //width: 1440px;
   margin: 0 30px;
   @media (max-width: 1215px) {
     margin: 0 15px;
@@ -123,18 +122,5 @@ h2 {
     width: 15px;
     height: 2px;
     background-color: $clr-rouge;
-  }
-}
-
-.preload {
-  opacity: 0;
-  header {
-    .logo, nav ul li a {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-  }
-  .header-block {
-    background-size: 120%;
   }
 }

@@ -97,13 +97,21 @@
     overflow: visible;
     @media (min-width: 2000px) {
       width: 1236px;
+      .grid-lines {
+        display: none;
+      }
     }
     &.animation {
       .photo-block {
         transform: translateX(-70px);
+        opacity: 0;
+        @media (min-width: 2000px) {
+          transform: translateX(-140px);
+        }
       }
       .inner-photo {
         transform: translateX(70px);
+        opacity: 0;
       }
     }
   }
@@ -116,7 +124,7 @@
     background-size: cover;
     background-position: 50% 50%;
     background-color: #93a1b3;
-    transition: all 0.3s ease-out;
+    transition: all 0.4s ease-out;
     @media (min-width: 2000px) {
       width: 1236px !important;
       transform: translateX(-70px);
@@ -170,7 +178,8 @@
     top: 130px;
     width: 610px;
     height: 343px;
-    transition: all 0.3s ease-out;
+    z-index: 2;
+    transition: all 0.4s ease-out 0.2s;
     @media (min-width: 2000px) {
       right: -170px;
     }
@@ -295,5 +304,12 @@
   }
   &.pic-zoom {
     cursor: zoom-out;
+  }
+  .grid-lines {
+    height: 597px;
+    @media (max-width: $screen-tablet) {
+      height: 251px;
+      display: none;
+    }
   }
 }

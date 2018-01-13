@@ -9,6 +9,7 @@
     // *** BODY of js code *** //
     customJS = function () {
 
+        // animation on load
         $(window).on('load', function() {
             $('body').removeClass('preload');
         });
@@ -31,6 +32,7 @@
         // homepage slider init
         var mySwiper = new Swiper('.swiper-container', {
             effect: 'fade',
+            speed: 1000,
             autoHeight: true,
             fadeEffect: {
                 crossFade: true
@@ -54,12 +56,8 @@
 
         mySwiper.on('slideChangeTransitionStart', function () {
             $('.hp-slider .swiper-container').addClass('animation');
-            console.log('start');
-        });
-
-        mySwiper.on('slideChangeTransitionEnd', function () {
+        }).on('slideChangeTransitionEnd', function () {
             $('.hp-slider .swiper-container').removeClass('animation');
-            console.log('end');
         });
 
         // homepage image zoom

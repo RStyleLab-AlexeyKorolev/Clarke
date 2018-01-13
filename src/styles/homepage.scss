@@ -38,16 +38,20 @@
   .txt-block {
     padding-top: 12px;
     color: $clr-white;
+    position: relative;
+    z-index: 2;
     @media (max-width: $screen-tablet) {
       padding-top: 60px;
     }
     h1 {
       font-size: 50px;
       font-weight: 900;
+      transition: transform 0.8s ease-out 1.6s, opacity 0.5s ease-out 1.5s;
       @media (max-width: $screen-tablet) {
         font-size: 40px;
         line-height: 1;
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.5s ease-out 1s, opacity 0.3s ease-out 1s;
       }
       span {
         font-weight: 600;
@@ -58,9 +62,11 @@
       font-size: 20px;
       line-height: 1.5;
       padding-top: 17px;
+      transition: transform 0.8s ease-out 1.9s, opacity 0.5s ease-out 1.5s;
       @media (max-width: $screen-tablet) {
         width: auto;
         padding-top: 29px;
+        transition: transform 0.5s ease-out 1.2s, opacity 0.3s ease-out 1s;
       }
     }
   }
@@ -77,6 +83,8 @@
   box-shadow: 0 2px 49px 0 rgba(0, 0, 0, 0.1);
   margin: -145px 0 118px 0;
   position: relative;
+  z-index: 2;
+  transition: opacity 0.5s ease-out 1.8s;
   @media (max-width: $screen-tablet) {
     width: auto;
     padding: 0;
@@ -86,6 +94,13 @@
     box-shadow: none;
     margin: 0 0 74px;
     position: static;
+    transition: none;
+  }
+  p {
+    transition: transform 0.8s ease-out 1.9s, opacity 0.5s ease-out 1.5s;
+    @media (max-width: $screen-tablet) {
+      transition: none;
+    }
   }
 }
 
