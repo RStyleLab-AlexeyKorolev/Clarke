@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   height: 722px;
-  background: url("../images/pic_header.png") no-repeat 50% 50% / cover;
+  background: url("../images/pic_header_1.jpg") no-repeat 50% 50% / cover;
   position: relative;
   background-size: 100%;
   transition: background-size 1.2s ease-out;
@@ -10,16 +10,16 @@
     background-size: cover;
   }
   @media (max-width: $screen-tablet) {
-    height: 640px;
+    height: 640px !important;
     margin-bottom: 40px;
     background-position: 87% 100%;
     @media (orientation: landscape) {
-      height: 100vh;
+      height: 100vh !important;
     }
   }
   @media (max-width: $screen-mobile) {
-    height: 100vh;
-    max-height: 670px;
+    height: 100vh !important;
+    max-height: 670px !important;
   }
   &:before {
     content: '';
@@ -58,7 +58,7 @@
       }
     }
     p {
-      width: 640px;
+      width: 663px;
       font-size: 20px;
       line-height: 1.5;
       padding-top: 17px;
@@ -92,7 +92,7 @@
     font-size: 17px;
     line-height: 1.8;
     box-shadow: none;
-    margin: 0 0 74px;
+    margin: 0 0 74px !important;
     position: static;
     transition: none;
   }
@@ -203,7 +203,7 @@
 }
 
 .accomodation-banner {
-  background: url("../images/pic_banner.png") no-repeat 50% 0 / cover;
+  background: url("../images/pic_banner.jpg") no-repeat 50% 50% / cover;
   margin: -72px 0 213px;
   @media (max-width: $screen-tablet) {
     margin: -36px 0 106px;

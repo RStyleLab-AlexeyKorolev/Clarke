@@ -30,35 +30,37 @@
         });
 
         // homepage slider init
-        var mySwiper = new Swiper('.swiper-container', {
-            effect: 'fade',
-            speed: 1000,
-            autoHeight: true,
-            fadeEffect: {
-                crossFade: true
-            },
-            loop: true,
-            simulateTouch: false,
-            zoom: {
-                containerClass: 'inner-photo',
-                maxRatio: 2,
-                toggle: false
-            },
-            pagination: {
-                el: '.hp-slider .count',
-                type: 'fraction'
-            },
-            navigation: {
-                nextEl: '.hp-slider-next',
-                prevEl: '.hp-slider-prev'
-            }
-        });
+        if ($('.swiper-container').length) {
+            var mySwiper = new Swiper('.swiper-container', {
+                effect: 'fade',
+                speed: 1000,
+                autoHeight: true,
+                fadeEffect: {
+                    crossFade: true
+                },
+                loop: true,
+                simulateTouch: false,
+                zoom: {
+                    containerClass: 'inner-photo',
+                    maxRatio: 2,
+                    toggle: false
+                },
+                pagination: {
+                    el: '.hp-slider .count',
+                    type: 'fraction'
+                },
+                navigation: {
+                    nextEl: '.hp-slider-next',
+                    prevEl: '.hp-slider-prev'
+                }
+            });
 
-        mySwiper.on('slideChangeTransitionStart', function () {
-            $('.hp-slider .swiper-container').addClass('animation');
-        }).on('slideChangeTransitionEnd', function () {
-            $('.hp-slider .swiper-container').removeClass('animation');
-        });
+            mySwiper.on('slideChangeTransitionStart', function () {
+                $('.hp-slider .swiper-container').addClass('animation');
+            }).on('slideChangeTransitionEnd', function () {
+                $('.hp-slider .swiper-container').removeClass('animation');
+            });
+        }
 
         // homepage image zoom
         body.on('click', '.hp-slider .loupe', function (e) {
