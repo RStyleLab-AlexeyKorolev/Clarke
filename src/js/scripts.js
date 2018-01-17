@@ -83,6 +83,17 @@
             body.toggleClass('mobile-menu');
         });
 
+        //tabs
+        $('.tabs').on('click', 'a', function (e) {
+            var self = $(this),
+                index = self.parent().index();
+
+            $('.tabs a').removeClass('active');
+            self.addClass('active');
+            $('.tab-cont').removeClass('active').eq(index).addClass('active');
+            e.preventDefault();
+        });
+
     }; // end customJS
 
     customJS();

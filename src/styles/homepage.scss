@@ -11,7 +11,6 @@
   }
   @media (max-width: $screen-tablet) {
     height: 640px !important;
-    margin-bottom: 40px;
     background-position: 87% 100%;
     @media (orientation: landscape) {
       height: 100vh !important;
@@ -92,7 +91,7 @@
     font-size: 17px;
     line-height: 1.8;
     box-shadow: none;
-    margin: 0 0 74px !important;
+    margin: 40px 0 74px !important;
     position: static;
     transition: none;
   }
