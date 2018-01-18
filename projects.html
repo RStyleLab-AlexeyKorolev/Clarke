@@ -39,10 +39,10 @@
         <nav>
           <div class="menu-caller"><i></i><i></i><i></i></div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">What we do</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="what_we_do.html">What we do</a></li>
             <li><a href="#">Meet Clarke group</a></li>
-            <li class="active"><a href="#">Projects</a></li>
+            <li class="active"><a href="projects.html">Projects</a></li>
             <li><a href="#">FAQ</a></li>
             <li class="contact-lnk"><a href="#">Contact us</a></li>
           </ul>
@@ -71,7 +71,7 @@
         <li><a href="#">Map</a></li>
       </ul>
     </div>
-    <div class="tab-cont">
+    <div class="tab-cont active">
       <div class="project-wrapper">
         <div class="item">
           <div class="pic-hold">Henderson Valley Road</div>
@@ -117,11 +117,48 @@
         </div>
       </div>
     </div>
-    <div class="tab-cont active">
+    <div class="tab-cont">
       <div class="filters-block filters-inTabs">
         <div class="filter">
           <div class="filter-el">
             <span>Filter type</span>
+            <i></i>
+          </div>
+          <div class="filter-dropdown">
+            <ul>
+              <li>Option 01</li>
+              <li>Option 02</li>
+              <li>Option 03</li>
+              <li>Option 04</li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-el">
+            <span>Filter type</span>
+            <i></i>
+          </div>
+          <div class="filter-dropdown">
+            <ul>
+              <li>Option 01</li>
+              <li>Option 02</li>
+              <li>Option 03</li>
+              <li>Option 04</li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-el">
+            <span>Filter type</span>
+            <i></i>
+          </div>
+          <div class="filter-dropdown">
+            <ul>
+              <li>Option 01</li>
+              <li>Option 02</li>
+              <li>Option 03</li>
+              <li>Option 04</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -170,15 +207,17 @@
         </div>
       </div>
     </div>
-    <div class="tab-cont">3</div>
+    <div class="tab-cont">
+      <div id="map"></div>
+    </div>
   </div>
   <footer>
     <div class="wrapper">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">What we do</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what_we_do.html">What we do</a></li>
         <li><a href="#">Meet Clarke group</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Contact us</a></li>
       </ul>
@@ -196,6 +235,31 @@
     </div>
   </footer>
 </div>
+<script>
+    function initMap() {
+        var locations = [
+            {lat: -36.851649, lng: 174.778433},
+            {lat: -36.849091, lng: 174.778497},
+            {lat: -36.852653, lng: 174.783755}
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: locations[0]
+        });
+
+        // var bullet = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        for (var i = 0; i < locations.length; i++) {
+            var marker = new google.maps.Marker({
+                position: locations[i],
+                map: map
+            });
+        }
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEhVoN4jmsr1O4OG7iILkgRFcAnnbmd7s&callback=initMap">
+</script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>

@@ -167,7 +167,7 @@ h3.subtitle {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: -12px 12px 0;
+    margin: -12px 20px 0;
   }
   li {
     display: inline-block;
@@ -213,22 +213,162 @@ h3.subtitle {
 
 .filters-block {
   display: flex;
+  background-color: $clr-white;
+  @media (max-width: $screen-tablet) {
+    justify-content: center;
+    padding: 4px 0 70px;
+  }
+  @media (max-width: $screen-mobile) {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .filter {
+  width: 200px;
   font-size: 12px;
   color: $clr-denim;
+  margin-left: 40px;
+  position: relative;
+  &:first-child {
+    margin-left: 0;
+  }
+  @media (max-width: $screen-desktop) {
+    width: 184px;
+  }
+  @media (max-width: $screen-tablet) {
+    width: 200px;
+  }
+  @media (max-width: $screen-mobile) {
+    width: 100%;
+    margin: 0 0 21px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .filter-el {
     display: flex;
     align-items: center;
-    width: 200px;
     height: 36px;
     border-bottom: 2px #ececec solid;
+    position: relative;
+    z-index: 100;
     cursor: pointer;
+    @media (max-width: $screen-tablet) {
+      border-bottom-width: 1px;
+    }
+    @media (max-width: $screen-mobile) {
+      z-index: auto;
+    }
     span {
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
+      flex: 1;
+      margin-right: 27px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: none;
+    }
+    i {
+      position: absolute;
+      right: 7px;
+      bottom: 14px;
+      transform: rotate(90deg);
+      &:before, &:after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        margin: auto 0;
+        right: 1px;
+        box-shadow: inset 0 0 0 12px;
+        transform-origin: right;
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .filter-dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-15px);
+    position: absolute;
+    left: -20px;
+    top: -8px;
+    width: calc(100% + 40px);
+    padding-top: 43px;
+    background-color: $clr-white;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px #f0f0f0 solid;
+    z-index: 99;
+    transition: all 0.15s ease-out;
+    ul {
+      padding-top: 5px;
+      max-height: 250px;
+      overflow-y: auto;
+      @media (max-width: $screen-mobile) {
+        max-height: 200px;
+      }
+      li {
+        padding: 10px 20px;
+        font-weight: 500;
+        line-height: 1.7;
+        cursor: pointer;
+        &:hover {
+          background-color: $clr-white-two;
+        }
+      }
+    }
+  }
+  &.active {
+    .filter-el {
+      @media (max-width: $screen-mobile) {
+        z-index: 100;
+      }
+      i {
+        transform: rotate(-90deg);
+        bottom: 20px;
+        right: 6px;
+      }
+    }
+    .filter-dropdown {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &.filled {
+    .filter-el {
+      color: $clr-rouge;
+      cursor: default;
+      i {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        transform: rotate(45deg);
+        right: -5px;
+        bottom: 5px;
+        &:before, &:after {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          transform-origin: initial;
+          width: 13px;
+          height: 1px;
+          margin: 0;
+        }
+        &:after {
+          width: 1px;
+          height: 13px;
+        }
+      }
     }
   }
 }
