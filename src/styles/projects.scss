@@ -3,9 +3,11 @@
   background-color: $clr-white;
   display: flex;
   align-items: center;
+  margin-top: -65px;
   @media (max-width: $screen-tablet) {
     height: 100px;
     justify-content: center;
+    margin-top: -20px;
   }
 }
 

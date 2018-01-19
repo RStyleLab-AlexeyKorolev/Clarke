@@ -151,8 +151,10 @@ h3.subtitle {
 }
 
 .inner-cont-wrapper {
+  padding-top: 65px;
   padding-bottom: 100px;
   @media (max-width: $screen-tablet) {
+    padding-top: 20px;
     padding-bottom: 20px;
   }
 }

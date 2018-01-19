@@ -10,15 +10,11 @@
     background-size: cover;
   }
   @media (max-width: $screen-tablet) {
-    height: 640px !important;
+    height: 450px !important;
     background-position: 87% 100%;
     @media (orientation: landscape) {
       height: 100vh !important;
     }
-  }
-  @media (max-width: $screen-mobile) {
-    height: 100vh !important;
-    max-height: 670px !important;
   }
   &:before {
     content: '';
