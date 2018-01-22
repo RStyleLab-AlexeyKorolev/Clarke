@@ -81,6 +81,7 @@
         // mobile menu
         body.on('click', '.menu-caller', function () {
             body.toggleClass('mobile-menu');
+            $(window).scrollTop(0);
         });
 
         //tabs
@@ -125,6 +126,17 @@
 
         body.on('click', function () {
             $('.filter').removeClass('active');
+        });
+
+        //inputs
+        $('.form-group input, .form-group textarea').on('focus', function () {
+            var field = $(this).closest('.form-group');
+            field.addClass('filled');
+        }).on('blur', function() {
+            var field = $(this).closest('.form-group');
+            if ($(this).val() === '') {
+                field.removeClass('filled');
+            }
         });
 
     }; // end customJS
