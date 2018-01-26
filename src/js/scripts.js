@@ -21,6 +21,7 @@
                 pageOffset = $('.main-wrapper').offset().left;
 
             $('.hp-slider .grey-bg, .hp-slider .photo-block').width(windowWidth - offset - pageOffset);
+            $('.director-block').width(windowWidth - offset);
         }
 
         sliderWidth();

@@ -1,0 +1,164 @@
+.director-block {
+  background: url("../images/dir_pattern.svg") no-repeat 50% 0 / cover;
+  margin: 0 0 114px -30px;
+  @media (max-width: 1215px) {
+    margin-left: -15px;
+  }
+  @media (max-width: $screen-desktop) {
+    margin-left: 0;
+  }
+  .wrapper {
+    min-height: 520px;
+    padding: 74px 490px 30px 0;
+    margin: 0 0 0 auto;
+    position: relative;
+    @media (max-width: $screen-desktop) {
+      padding: 60px 460px 20px 0;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 90px;
+      background-color: $clr-pinkish-grey;
+      position: absolute;
+      top: 173px;
+      left: -53px;
+    }
+  }
+  .pic {
+    width: 410px;
+    height: 520px;
+    background: url("../images/team/austen_clarke.png") no-repeat 0 0;
+    box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 0.75;
+    letter-spacing: -0.3px;
+    color: $clr-denim;
+    margin-bottom: 20px;
+  }
+  .post {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 2.5px;
+    color: $clr-denim;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+  }
+  p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.54;
+    padding-bottom: 20px;
+  }
+}
+
+.team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  @media (max-width: $screen-tablet) {
+    justify-content: space-around;
+  }
+  @media (max-width: $screen-mobile) {
+    display: block;
+  }
+  .item {
+    width: 330px;
+    min-height: 445px;
+    margin-bottom: 50px;
+    background-color: $clr-white;
+    box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.1);
+    @media (max-width: $screen-desktop) {
+      width: 300px;
+    }
+    @media (max-width: $screen-tablet) {
+      width: 330px;
+    }
+    @media (max-width: $screen-mobile) {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+  .pic-hold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 215px;
+    padding: 22px;
+    position: relative;
+    color: $clr-white;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(255, 255, 255, 0));
+    }
+    span {
+      display: block;
+      position: relative;
+      z-index: 2;
+      line-height: 1.4;
+      letter-spacing: -0.3px;
+      text-align: center;
+      &.name {
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 1.9px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        &:after {
+          content: "";
+          display: block;
+          width: 69px;
+          height: 1px;
+          background-color: $clr-white;
+          margin: 9px auto 0;
+        }
+      }
+    }
+  }
+  .description {
+    padding: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.54;
+  }
+}
+
+.team-info {
+  background: url("../images/bg_pattern_blue.svg") no-repeat 50% 0 / cover;
+  margin-bottom: 30px;
+  .wrapper {
+    padding: 113px 0 80px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: $clr-beige-two;
+  }
+  p {
+    padding-bottom: 30px;
+  }
+  .btn {
+    min-width: 226px;
+    margin-top: 35px;
+  }
+}
