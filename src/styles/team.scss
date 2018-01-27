@@ -7,6 +7,14 @@
   @media (max-width: $screen-desktop) {
     margin-left: 0;
   }
+  @media (max-width: $screen-tablet) {
+    width: auto !important;
+    margin-bottom: 60px;
+  }
+  @media (max-width: $screen-mobile) {
+    background-image: url("../images/dir_pattern_mob.svg");
+    margin-bottom: 0;
+  }
   .wrapper {
     min-height: 520px;
     padding: 74px 490px 30px 0;
@@ -14,6 +22,15 @@
     position: relative;
     @media (max-width: $screen-desktop) {
       padding: 60px 460px 20px 0;
+    }
+    @media (max-width: $screen-tablet) {
+      min-height: 400px;
+      padding: 30px 330px 10px 20px;
+      margin: 0;
+    }
+    @media (max-width: $screen-mobile) {
+      min-height: auto;
+      padding: 50px 20px 120px 20px;
     }
     &:before {
       content: "";
@@ -24,16 +41,32 @@
       position: absolute;
       top: 173px;
       left: -53px;
+      @media (max-width: $screen-tablet) {
+        display: none;
+      }
     }
   }
   .pic {
     width: 410px;
     height: 520px;
-    background: url("../images/team/austen_clarke.png") no-repeat 0 0;
+    background: url("../images/team/austen_clarke.png") no-repeat 50% 0;
     box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     right: 0;
+    @media (max-width: $screen-tablet) {
+      width: 290px;
+      height: 400px;
+      background-position: 35% 10%;
+    }
+    @media (max-width: $screen-mobile) {
+      width: auto;
+      max-width: 410px;
+      height: 264px;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+      position: static;
+      margin: 0 auto 30px;
+    }
   }
   h3 {
     font-size: 40px;
@@ -42,6 +75,13 @@
     letter-spacing: -0.3px;
     color: $clr-denim;
     margin-bottom: 20px;
+    @media (max-width: $screen-mobile) {
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.2px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
   }
   .post {
     display: block;
@@ -52,6 +92,10 @@
     color: $clr-denim;
     text-transform: uppercase;
     margin-bottom: 26px;
+    @media (max-width: $screen-mobile) {
+      text-align: center;
+      margin-bottom: 36px;
+    }
   }
   p {
     font-size: 13px;
@@ -71,6 +115,8 @@
   }
   @media (max-width: $screen-mobile) {
     display: block;
+    max-width: 375px;
+    margin: -70px auto 45px;
   }
   .item {
     width: 330px;
@@ -86,6 +132,7 @@
     }
     @media (max-width: $screen-mobile) {
       width: auto;
+      min-height: auto;
       margin-bottom: 30px;
     }
   }
@@ -140,12 +187,18 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 1.54;
+    @media (max-width: $screen-mobile) {
+      padding: 25px 20px;
+    }
   }
 }
 
 .team-info {
   background: url("../images/bg_pattern_blue.svg") no-repeat 50% 0 / cover;
   margin-bottom: 30px;
+  @media (max-width: $screen-mobile) {
+    margin-bottom: 75px;
+  }
   .wrapper {
     padding: 113px 0 80px;
     font-size: 20px;
@@ -153,12 +206,28 @@
     line-height: 1.5;
     letter-spacing: -0.4px;
     color: $clr-beige-two;
+    @media (max-width: $screen-tablet) {
+      padding: 50px 30px;
+    }
+    @media (max-width: $screen-mobile) {
+      font-size: 18px;
+      line-height: 1.67;
+      text-align: center;
+      padding-bottom: 0;
+    }
   }
   p {
     padding-bottom: 30px;
+    @media (max-width: $screen-mobile) {
+      text-align: left;
+    }
   }
   .btn {
     min-width: 226px;
     margin-top: 35px;
+    @media (max-width: $screen-mobile) {
+      margin-top: -10px;
+      transform: translateY(30px);
+    }
   }
 }
