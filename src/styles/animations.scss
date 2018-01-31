@@ -87,40 +87,19 @@
 }
 
 // spinner
-.spinner,
-.spinner:after {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-}
 .spinner {
   display: none;
-  font-size: 10px;
   position: fixed;
   left: 50%;
   top: 50%;
-  margin: -35px 0 0 -35px;
+  transform: translate(-50%, -50%);
   z-index: 999;
-  text-indent: -9999em;
-  border: 10px solid rgba(0, 0, 0, 0.2);
-  border-left-color: $clr-white;
-  transform: translateZ(0);
-  animation: load8 1.1s infinite linear;
-}
-@-webkit-keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes load8 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  background-color: $clr-charcoal-grey;
+  padding: 40px;
+  border-radius: 20px;
+  opacity: 0.3;
+  @media (max-width: $screen-mobile) {
+    width: 160px;
   }
 }
 
