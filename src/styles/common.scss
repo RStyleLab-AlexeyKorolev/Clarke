@@ -378,8 +378,11 @@ h3.subtitle {
 .form-group {
   position: relative;
   background-color: $clr-white;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
   padding-top: 10px;
+  @media (max-width: $screen-mobile) {
+    margin-bottom: 22px;
+  }
   input, textarea {
     width: 100%;
     height: 30px;
@@ -402,6 +405,9 @@ h3.subtitle {
     line-height: 1.5;
     resize: none;
     overflow: auto;
+    @media (max-width: $screen-mobile) {
+      height: 267px;
+    }
   }
   label {
     display: block;
@@ -417,6 +423,12 @@ h3.subtitle {
     user-select: none;
     transition: all .2s ease-out;
   }
+  .error-text {
+    display: none;
+    padding: 8px 8px 0;
+    font-size: 11px;
+    color: $clr-rouge;
+  }
   &.ta-wrapper {
     background-color: transparent;
     label {
@@ -431,9 +443,12 @@ h3.subtitle {
       color: #cccfdd;
     }
   }
-}
-
-.btn-hold {
-  padding-top: 21px;
-  text-align: center;
+  &.error {
+    input, textarea {
+      border-color: $clr-rouge;
+    }
+    .error-text {
+      display: block;
+    }
+  }
 }

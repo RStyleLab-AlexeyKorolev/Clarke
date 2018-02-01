@@ -29,7 +29,7 @@
   <span></span>
 </div>
 <div class="main-wrapper inner-page">
-  <div class="header-block" style="background-image: url('dist/images/pic_header_4.jpg');">
+  <div class="header-block" style="background-image: url('dist/images/pic_header_6.jpg');">
     <header>
       <div class="wrapper">
         <div class="logo">
@@ -63,32 +63,59 @@
       <span></span>
     </div>
   </div>
-  <div class="wrapper inner-cont-wrapper">
-    <form action="#">
-      <div class="form-group">
-        <label>Your first name *</label>
-        <input type="text">
+  <div class="wrapper inner-cont-wrapper contact-wrapper">
+    <div class="col-form">
+      <form action="#">
+        <div class="form-group">
+          <label>Your first name *</label>
+          <input type="text">
+          <span class="error-text">This is a mandatory field</span>
+        </div>
+        <div class="form-group">
+          <label>Your last name *</label>
+          <input type="text">
+          <span class="error-text">This is a mandatory field</span>
+        </div>
+        <div class="form-group">
+          <label>Your email address *</label>
+          <input type="email">
+          <span class="error-text">This is a mandatory field</span>
+        </div>
+        <div class="form-group error">
+          <label>Your phone number *</label>
+          <input type="tel">
+          <span class="error-text">This is a mandatory field</span>
+        </div>
+        <div class="form-group ta-wrapper">
+          <label>Your message...</label>
+          <textarea cols="1" rows="1"></textarea>
+          <span class="error-text">This is a mandatory field</span>
+        </div>
+        <div class="btn-hold">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+    <aside>
+      <div class="cont-info">
+        <h4>Clarke Group</h4>
+        <div class="box">
+          <p>09 263 7005</p>
+          <p><a href="mailto:contact@clarkegroup.co.nz">contact@clarkegroup.co.nz</a></p>
+        </div>
+        <div class="box">
+          <h5>Office</h5>
+          <p>Level 3, 60 Parnell Road, <br>Parnell, Auckland, 1052.</p>
+        </div>
+        <div class="box">
+          <h5>Postal</h5>
+          <p>PO Box 37454, Parnell, <br>Auckland, 1151.</p>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Your last name *</label>
-        <input type="text">
-      </div>
-      <div class="form-group">
-        <label>Your email address *</label>
-        <input type="email">
-      </div>
-      <div class="form-group">
-        <label>Your phone number *</label>
-        <input type="tel">
-      </div>
-      <div class="form-group ta-wrapper">
-        <label>Your message...</label>
-        <textarea cols="1" rows="1"></textarea>
-      </div>
-      <div class="btn-hold">
-        <button type="submit" class="btn">Submit</button>
-      </div>
-    </form>
+      <a class="cont-map" target="_blank" href="https://www.google.com/maps/place/Clarke+Group/@-36.851898,174.7762873,17z/data=!3m1!4b1!4m5!3m4!1s0x6d0d4dc0fd6cbfbf:0xc3151903c8e9378!8m2!3d-36.851898!4d174.778476">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=60+Parnell+Road,+Parnell,+Auckland,+1052&zoom=13&scale=2&size=438x310&maptype=roadmap&key=AIzaSyCEhVoN4jmsr1O4OG7iILkgRFcAnnbmd7s&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0x000000%7Clabel:%7CClarke+Group,+Парнелл,+Окленд,+Новая+Зеландия&style=saturation:-100&style=feature:water|color:0x757575" alt="Google Map of Level3,60 Parnell Road, Parnell, Auckland, 1052">
+      </a>
+    </aside>
   </div>
   <footer>
     <div class="wrapper">

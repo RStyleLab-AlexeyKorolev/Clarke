@@ -12,9 +12,9 @@
   @media (max-width: $screen-tablet) {
     height: 450px !important;
     background-position: 87% 100%;
-    @media (orientation: landscape) {
-      height: 100vh !important;
-    }
+  }
+  @media (max-width: $screen-mobile) and (orientation: landscape) {
+    height: 100vh !important;
   }
   &:before {
     content: '';
