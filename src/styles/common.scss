@@ -165,7 +165,7 @@ h3.subtitle {
   @media (max-width: $screen-tablet) {
     margin-top: -12px;
   }
-  @media (max-width: 480px) and (orientation: portrait) {
+  @media (max-width: $screen-mobile-sm) and (orientation: portrait) {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -177,7 +177,7 @@ h3.subtitle {
     &:last-child {
       padding-right: 0;
     }
-    @media (max-width: 480px) and (orientation: portrait) {
+    @media (max-width: $screen-mobile-sm) and (orientation: portrait) {
       padding-right: 0;
     }
   }

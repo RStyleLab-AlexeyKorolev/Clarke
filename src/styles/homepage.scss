@@ -203,6 +203,9 @@
   @media (max-width: $screen-tablet) {
     margin: -36px 0 106px;
   }
+  @media (max-width: $screen-mobile-sm) {
+    background: url("../images/pic_banner_mob.jpg") no-repeat 50% 0 / cover;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -288,7 +291,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    background: url("../images/pic_team.png") no-repeat 50% 100% / cover;
+    background: url("../images/pic_team.jpg") no-repeat 50% 100% / cover;
     @media (min-width: 1800px) {
       background-position: 50% 50%;
     }
@@ -374,16 +377,15 @@
     }
   }
   .img-block {
-    width: 549px;
-    height: 373px;
+    width: 534px;
+    height: 302px;
     box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.15);
     position: absolute;
-    right: -110px;
+    right: -95px;
     bottom: -50px;
-    background: url("../images/pic_history.png") no-repeat 50% 100% / cover;
+    background: url("../images/pic_history.jpg") no-repeat 50% 100% / cover;
     @media (max-width: $screen-desktop) {
       width: 449px;
-      height: 273px;
       right: -30px;
     }
     @media (max-width: $screen-tablet) {
@@ -399,6 +401,9 @@
     @media (max-width: $screen-mobile) {
       height: 270px;
       background-position: 50% 30%;
+    }
+    @media (max-width: $screen-mobile-sm) {
+      background: url("../images/pic_history_mob.jpg") no-repeat 50% 30% / cover;
     }
   }
 }

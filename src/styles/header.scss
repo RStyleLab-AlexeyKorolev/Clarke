@@ -186,7 +186,7 @@ header {
               font-size: 13px;
               padding: 8px 20px;
             }
-            @media (max-width: 480px) and (orientation: landscape) {
+            @media (max-width: $screen-mobile-sm) and (orientation: landscape) {
               padding: 5px 20px;
             }
           }

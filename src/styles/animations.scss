@@ -89,18 +89,14 @@
 // spinner
 .spinner {
   display: none;
+  width: 100px;
+  height: 118px;
+  padding: 0 20px 20px;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  background-color: $clr-charcoal-grey;
-  padding: 40px;
-  border-radius: 20px;
-  opacity: 0.3;
-  @media (max-width: $screen-mobile) {
-    width: 160px;
-  }
 }
 
 // on load animation

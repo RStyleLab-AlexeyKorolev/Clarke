@@ -2,10 +2,13 @@ footer {
   margin: 0 -30px;
   font-size: 13px;
   color: $clr-white;
-  background: url("../images/pic_footer.png") no-repeat 50% 100% / cover;
+  background: url("../images/pic_footer.jpg") no-repeat 50% 100% / cover;
   @media (max-width: $screen-tablet) {
     margin: 0;
     font-size: 15px;
+  }
+  @media (max-width: $screen-mobile-sm) {
+    background: url("../images/pic_footer_mob.jpg") no-repeat 50% 0 / cover;
   }
   .wrapper {
     display: flex;
