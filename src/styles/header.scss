@@ -24,6 +24,9 @@ header {
       &:last-child {
         display: none;
       }
+      &:only-child {
+        display: block;
+      }
     }
     @media (max-width: $screen-tablet) {
       width: 175px;

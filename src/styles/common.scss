@@ -80,6 +80,18 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.7px;
+  color: $clr-black;
+  margin-bottom: 35px;
+  @media (max-width: $screen-mobile) {
+    margin-bottom: 30px;
+  }
+}
+
 h3.subtitle {
   font-size: 15px;
   font-weight: bold;
@@ -444,6 +456,41 @@ h3.subtitle {
       font-size: 11px;
       font-weight: normal;
       color: #cccfdd;
+    }
+  }
+}
+
+.loupe {
+  display: block;
+  width: 54px;
+  height: 54px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -27px 0 0 -27px;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  i {
+    position: relative;
+    top: 19px;
+    left: -1px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    border: 2px solid $clr-white;
+    &:after {
+      content: "";
+      height: 2px;
+      width: 8px;
+      background: $clr-white;
+      position: absolute;
+      top: 12px;
+      left: 9px;
+      transform: rotate(45deg);
     }
   }
 }

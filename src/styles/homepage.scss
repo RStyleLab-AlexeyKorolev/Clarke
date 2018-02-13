@@ -38,6 +38,18 @@
     @media (max-width: $screen-tablet) {
       padding-top: 60px;
     }
+    .title {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: $clr-beige-two;
+      margin-bottom: 7px;
+      transition: transform 0.8s ease-out 1.3s, opacity 0.5s ease-out 1.5s;
+      @media (max-width: $screen-tablet) {
+        transition: transform 0.5s ease-out 0.8s, opacity 0.3s ease-out 1s;
+      }
+    }
     h1 {
       font-size: 50px;
       font-weight: 900;

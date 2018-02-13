@@ -141,11 +141,13 @@
         });
 
         //phone validation mask
-        $.validator.addMethod('phoneMask', function(phone_number, element) {
-            phone_number = phone_number.replace(/\s+/g, "");
-            return this.optional(element) || phone_number.length > 9 &&
-                phone_number.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
-        }, 'Please specify a valid phone number');
+        if ($('#contactForm').length) {
+            $.validator.addMethod('phoneMask', function (phone_number, element) {
+                phone_number = phone_number.replace(/\s+/g, "");
+                return this.optional(element) || phone_number.length > 9 &&
+                    phone_number.match(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/);
+            }, 'Please specify a valid phone number');
+        }
 
         //contact form validate
         if ($('#contactForm').length) {
