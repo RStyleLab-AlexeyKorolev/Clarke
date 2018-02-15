@@ -219,7 +219,7 @@
   padding: 100px 0 60px;
   background-color: $clr-white;
   @media (max-width: $screen-tablet) {
-    padding: 94px 0 80px;
+    padding: 0 0 70px; //94px 0 80px
   }
   .partners-logos {
     display: flex;
