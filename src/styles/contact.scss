@@ -18,9 +18,8 @@
       padding: 20px 0 60px;
     }
     .btn-hold {
-      padding-top: 8px;
       @media (max-width: $screen-mobile) {
-        padding-top: 21px;
+        padding-top: 13px;
         text-align: center;
       }
     }

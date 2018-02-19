@@ -228,10 +228,10 @@ h3.subtitle {
 .form-group {
   position: relative;
   background-color: $clr-white;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   padding-top: 10px;
   @media (max-width: $screen-mobile) {
-    margin-bottom: 22px;
+    margin-bottom: 30px;
   }
   input, textarea {
     width: 100%;

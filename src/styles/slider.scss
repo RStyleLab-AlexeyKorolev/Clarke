@@ -117,7 +117,7 @@
   }
   .photo-block {
     height: 597px;
-    color: $clr-charcoal-grey;
+    color: $clr-white;
     font-size: 50px;
     font-weight: 300;
     line-height: 0.92;
@@ -141,19 +141,22 @@
     & > .wrapper {
       float: right;
       margin: 0;
-      padding-top: 86px;
+      padding-top: 76px;
       @media (max-width: $screen-tablet) {
         float: none;
         height: 100%;
         padding-top: 27px;
       }
       & > div {
-        width: 500px;
+        width: 520px;
+        padding: 10px 20px 20px;
+        background-color: rgba(0,0,0,0.4);
         @media (max-width: $screen-desktop) {
-          width: 400px;
+          width: 440px;
         }
         @media (max-width: $screen-tablet) {
-          width: auto;
+          width: 250px;
+          padding: 10px 15px;
         }
       }
     }
