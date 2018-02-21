@@ -69,11 +69,11 @@
       font-size: 20px;
       line-height: 1.5;
       padding-top: 17px;
-      transition: transform 0.8s ease-out 1.9s, opacity 0.5s ease-out 1.5s;
+      transition: transform 0.8s ease-out 1.7s, opacity 0.5s ease-out 1.75s;
       @media (max-width: $screen-tablet) {
         width: auto;
         padding-top: 29px;
-        transition: transform 0.5s ease-out 1.2s, opacity 0.3s ease-out 1s;
+        transition: transform 0.5s ease-out 1.1s, opacity 0.3s ease-out 1.2s;
       }
     }
   }
