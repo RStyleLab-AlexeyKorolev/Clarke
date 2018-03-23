@@ -6,6 +6,9 @@
   @media (max-width: $screen-desktop) {
     margin: 0;
   }
+  @media (max-width: $screen-tablet) {
+    overflow-x: hidden;
+  }
   &:before {
     content: '';
     display: block;
