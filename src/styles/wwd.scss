@@ -38,7 +38,7 @@
   .heading {
     font-size: 30px;
     letter-spacing: -0.2px;
-    min-height: auto;
+    min-height: 0;
     margin-bottom: 24px;
     @media (max-width: $screen-tablet) {
       font-size: 28px;
@@ -107,7 +107,7 @@
     position: relative;
     @media (max-width: $screen-tablet) {
       display: block;
-      min-height: auto;
+      min-height: 0;
       padding: 130px 25px 100px;
       font-size: 18px;
       line-height: 1.67;
