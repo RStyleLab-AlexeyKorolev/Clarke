@@ -12,6 +12,7 @@
         // animation on load
         $(window).on('load', function() {
             $('body').removeClass('preload');
+            csSliderState();
         });
 
         // homepage slider wrapper size
@@ -28,11 +29,12 @@
 
         $(window).on('resize', function () {
             sliderWidth();
+            csSliderState();
         });
 
         // homepage slider init
-        if ($('.swiper-container').length) {
-            var mySwiper = new Swiper('.swiper-container', {
+        if ($('.hp-slider').length) {
+            var mySwiper = new Swiper('.hp-slider .swiper-container', {
                 effect: 'fade',
                 speed: 1000,
                 autoHeight: true,
@@ -127,6 +129,51 @@
                     }
                 }
             });
+        }
+
+        // case study slider init
+        if ($('.case-gallery').length) {
+            var mySwiper2 = new Swiper('.case-gallery', {
+                slidesPerView: 'auto',
+                simulateTouch: false,
+                navigation: {
+                    nextEl: '.case-gallery .next',
+                    prevEl: '.case-gallery .prev'
+                },
+                breakpoints: {
+                    666: {
+                        centeredSlides: true
+                    }
+                }
+            });
+        }
+
+        // case study image zoom
+        body.on('click', '.case-gallery .loupe', function (e) {
+            var item = $(this).closest('.item');
+
+            item.siblings().removeClass('slide-zoom');
+
+            if (!item.hasClass('slide-zoom')) {
+                item.addClass('slide-zoom');
+            } else {
+                item.removeClass('slide-zoom');
+            }
+            e.stopPropagation();
+        });
+
+        body.on('click', function () {
+            if ($('.case-gallery').length) {
+                $('.case-gallery .item').removeClass('slide-zoom');
+            }
+        });
+
+        function csSliderState() {
+            if ($('.case-gallery .swiper-button-disabled').length === 2) {
+                $('.case-gallery').addClass('no-slider');
+            } else {
+                $('.case-gallery').removeClass('no-slider');
+            }
         }
 
     }; // end customJS
